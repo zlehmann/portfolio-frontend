@@ -8,19 +8,14 @@ class NavIcon extends Component {
   }
 
   render () {
-
-
     return (
       <Line
-        points = {[150, 0, 300, 75, 300, 225, 150, 300, 0, 225, 0, 75]}
-        fill = {'black'}
+        key = {"tech"}
+        points = {[150, 0, 300, 75, 300, 225, 150, 150]}
+        fill = {'blue'}
         opacity = {0.5}
-        stroke = {'white'}
-        strokeWidth = {1}
         closed = {true}
-        shadowColor = "black"
-        shadowBlur = {10}
-        shadowOpacity = {0.3}
+        onClick = {this.handleClick}
       />
     )
   }
