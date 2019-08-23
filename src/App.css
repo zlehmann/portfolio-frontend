@@ -31,3 +31,13 @@
     transform: rotate(360deg);
   }
 }
+
+#techButton {
+  position: absolute; top: 0px; left: 0px;
+  z-index: 1;
+}
+
+#navIcon {
+  position: absolute; top: 0px; left: 0px;
+  z-index: 0;
+}
