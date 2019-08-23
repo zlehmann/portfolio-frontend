@@ -1,5 +1,4 @@
 import React from 'react';
-import Konva from 'konva';
 import logo from './logo.svg';
 import './App.css';
 import NavIcon from './components/NavIcon.js'
