@@ -5,19 +5,29 @@ class TechButton extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      selectedCat: "none"
+      hoveredCat: "none",
+      selectedCat: "none",
+      btnOpacity: 0.2
     }
+  }
+
+  handleMouseEnter = (e) => {
+    this.setState({hoveredCat: e["target"]["attrs"]["id"]})
+  }
+
+  handleMouseLeave = (e) => {
+    this.setState({hoveredCat: "none"})
   }
 
   handleClick = (e) => {
     this.setState({selectedCat: e["target"]["attrs"]["id"]})
   }
 
-  isSelected = (id) => {
-    if (id === this.state.selectedCat) {
+  isSelectedFill = (id) => {
+    if (id === this.state.selectedCat || id === this.state.hoveredCat) {
       return "white"
     } else {
-      return "black"
+      return "none"
     }
   }
 
@@ -28,34 +38,40 @@ class TechButton extends Component {
           <Line
             id = {"tech"}
             points = {[150, 0, 300, 75, 300, 225, 150, 150]}
-            fill = {this.isSelected("tech")}
+            fill = {this.isSelectedFill("tech")}
             stroke = {"white"}
             strokeWidth = {0.5}
-            opacity = {0.5}
+            opacity = {this.state.btnOpacity}
             closed = {true}
             listening = {true}
+            onMouseEnter = {this.handleMouseEnter}
+            onMouseLeave = {this.handleMouseLeave}
             onClick = {this.handleClick}
           />
           <Line
             id = {"int"}
             points = {[300, 225, 150, 300, 0, 225, 150, 150]}
-            fill = {this.isSelected("int")}
+            fill = {this.isSelectedFill("int")}
             stroke = {"white"}
             strokeWidth = {0.5}
-            opacity = {0.5}
+            opacity = {this.state.btnOpacity}
             closed = {true}
             listening = {true}
+            onMouseEnter = {this.handleMouseEnter}
+            onMouseLeave = {this.handleMouseLeave}
             onClick = {this.handleClick}
           />
           <Line
             id = {"env"}
             points = {[0, 225, 0, 75, 150, 0, 150, 150]}
-            fill = {this.isSelected("env")}
+            fill = {this.isSelectedFill("env")}
             stroke = {"white"}
             strokeWidth = {0.5}
-            opacity = {0.5}
+            opacity = {this.state.btnOpacity}
             closed = {true}
             listening = {true}
+            onMouseEnter = {this.handleMouseEnter}
+            onMouseLeave = {this.handleMouseLeave}
             onClick = {this.handleClick}
           />
         </Layer>

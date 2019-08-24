@@ -12,6 +12,9 @@ function App() {
         <TechButton />
       </div>
       <div id="navIcon">
+        <img id="leaf" alt="Environmental" src={process.env.PUBLIC_URL + '/env-leaf.png'} />
+        <img id="gear" alt="Technology" src={process.env.PUBLIC_URL + '/tech-gear.png'} />
+        <img id="hammer" alt="Other Interests" src={process.env.PUBLIC_URL + '/int-hammer.png'} />
         <NavIcon />
       </div>
     </div>

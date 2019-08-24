@@ -34,10 +34,33 @@
 
 #techButton {
   position: absolute; top: 0px; left: 0px;
-  z-index: 1;
+  z-index: 2;
+}
+
+#navIcon img {
+  width: 50%;
+  position: absolute;
+  z-index:1;
+}
+
+#leaf {
+  top: 40px;
+  left: 10px;
+}
+
+#gear {
+  top: 40px;
+  left: 155px;
+}
+
+#hammer {
+  top: 155px;
+  left: 80px;
 }
 
 #navIcon {
+  width: 300px;
+  height: 300px;
   position: absolute; top: 0px; left: 0px;
   z-index: 0;
 }
