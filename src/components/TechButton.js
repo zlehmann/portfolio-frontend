@@ -5,15 +5,20 @@ class TechButton extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      techColor: "black",
-      envColor: "black",
-      intColor: "black"
+      selectedCat: "none"
     }
   }
 
   handleClick = (e) => {
-    console.log(e)
-    console.log("Clicked ", e["target"]["attrs"]["id"])
+    this.setState({selectedCat: e["target"]["attrs"]["id"]})
+  }
+
+  isSelected = (id) => {
+    if (id === this.state.selectedCat) {
+      return "white"
+    } else {
+      return "black"
+    }
   }
 
   render () {
@@ -23,7 +28,7 @@ class TechButton extends Component {
           <Line
             id = {"tech"}
             points = {[150, 0, 300, 75, 300, 225, 150, 150]}
-            fill = {this.props.techColor}
+            fill = {this.isSelected("tech")}
             stroke = {"white"}
             strokeWidth = {0.5}
             opacity = {0.5}
@@ -34,7 +39,7 @@ class TechButton extends Component {
           <Line
             id = {"int"}
             points = {[300, 225, 150, 300, 0, 225, 150, 150]}
-            fill = {this.props.intColor}
+            fill = {this.isSelected("int")}
             stroke = {"white"}
             strokeWidth = {0.5}
             opacity = {0.5}
@@ -45,7 +50,7 @@ class TechButton extends Component {
           <Line
             id = {"env"}
             points = {[0, 225, 0, 75, 150, 0, 150, 150]}
-            fill = {this.props.envColor}
+            fill = {this.isSelected("env")}
             stroke = {"white"}
             strokeWidth = {0.5}
             opacity = {0.5}
