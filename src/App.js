@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Stage, Layer } from 'react-konva';
+//import { Stage, Layer } from 'react-konva';
 import NavIcon from './components/NavIcon.js'
 import TechButton from './components/TechButton.js'
 
