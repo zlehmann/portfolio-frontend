@@ -2,38 +2,56 @@ import React, {Component} from 'react'
 import { Stage, Layer, Line } from 'react-konva'
 
 class TechButton extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      techColor: "black",
+      envColor: "black",
+      intColor: "black"
+    }
+  }
+
+  handleClick = (e) => {
+    console.log(e)
+    console.log("Clicked ", e["target"]["attrs"]["id"])
+  }
 
   render () {
-
     return (
       <Stage width={300} height={300}>
         <Layer>
           <Line
-            key = {"tech"}
+            id = {"tech"}
             points = {[150, 0, 300, 75, 300, 225, 150, 150]}
-            fill = {'blue'}
+            fill = {this.props.techColor}
+            stroke = {"white"}
+            strokeWidth = {0.5}
             opacity = {0.5}
             closed = {true}
             listening = {true}
-            onClick = {() => {console.log("Clicked tech")}}
+            onClick = {this.handleClick}
           />
           <Line
-            key = {"int"}
+            id = {"int"}
             points = {[300, 225, 150, 300, 0, 225, 150, 150]}
-            fill = {'gray'}
+            fill = {this.props.intColor}
+            stroke = {"white"}
+            strokeWidth = {0.5}
             opacity = {0.5}
             closed = {true}
             listening = {true}
-            onClick = {() => {console.log("Clicked int")}}
+            onClick = {this.handleClick}
           />
           <Line
-            key = {"env"}
+            id = {"env"}
             points = {[0, 225, 0, 75, 150, 0, 150, 150]}
-            fill = {'green'}
+            fill = {this.props.envColor}
+            stroke = {"white"}
+            strokeWidth = {0.5}
             opacity = {0.5}
             closed = {true}
             listening = {true}
-            onClick = {() => {console.log("Clicked end")}}
+            onClick = {this.handleClick}
           />
         </Layer>
       </Stage>
