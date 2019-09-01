@@ -33,12 +33,16 @@ class TechButton extends Component {
   }
 
   render () {
+    let techCoors = [150, 0, 300, 75, 300, 225, 150, 150];
+    let envCoors = [0, 225, 0, 75, 150, 0, 150, 150];
+    let intCoors = [300, 225, 150, 300, 0, 225, 150, 150];
+
     return (
-      <Stage width={300} height={300}>
+      <Stage width={this.props.scale * 300} height={this.props.scale * 300}>
         <Layer>
           <Line
             id = {"tech"}
-            points = {[150, 0, 300, 75, 300, 225, 150, 150]}
+            points = {techCoors.map(x => x * this.props.scale)}
             fill = {this.isSelectedFill("tech")}
             stroke = {"white"}
             strokeWidth = {0.5}
@@ -51,7 +55,7 @@ class TechButton extends Component {
           />
           <Line
             id = {"int"}
-            points = {[300, 225, 150, 300, 0, 225, 150, 150]}
+            points = {intCoors.map(x => x * this.props.scale)}
             fill = {this.isSelectedFill("int")}
             stroke = {"white"}
             strokeWidth = {0.5}
@@ -64,7 +68,7 @@ class TechButton extends Component {
           />
           <Line
             id = {"env"}
-            points = {[0, 225, 0, 75, 150, 0, 150, 150]}
+            points = {envCoors.map(x => x * this.props.scale)}
             fill = {this.isSelectedFill("env")}
             stroke = {"white"}
             strokeWidth = {0.5}

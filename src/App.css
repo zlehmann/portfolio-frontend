@@ -38,35 +38,26 @@
 }
 
 #navIcon img {
-  width: 50%;
   position: absolute;
   z-index:2;
 }
 
-#navIcon img:hover {
-  /* filter: url(filters.svg#grayscale);  Firefox 3.5+*/
-  filter: gray; /* IE5+ */
-  -webkit-filter: grayscale(1); /* webkit nightlies & chrome canary */
-}
-
 #leaf {
-  top: 40px;
-  left: 10px;
+  top: 13.333%;
+  left: 3.333%;
 }
 
 #gear {
-  top: 40px;
-  left: 155px;
+  top: 13.333%;
+  left: 51.666%;
 }
 
 #hammer {
-  top: 155px;
-  left: 80px;
+  top: 51.666%;
+  left: 26.666%;
 }
 
 #navIcon {
-  width: 300px;
-  height: 300px;
   position: absolute; top: 0px; left: 0px;
   z-index: 1;
 }
