@@ -21,6 +21,7 @@ class TechButton extends Component {
 
   handleClick = (e) => {
     this.setState({selectedCat: e["target"]["attrs"]["id"]})
+    this.props.action()
   }
 
   isSelectedFill = (id) => {
