@@ -8,17 +8,25 @@ class NavContainer extends Component {
     super(props)
     this.handleClick = this.handleClick.bind(this)
     this.state = {
-      currentSelection: ""
+      currentSelection: "none",
+      showBar: false
     }
   }
 
-  handleClick() {
+  handleClick(e) {
     this.setState({
-      currentSelection: "clicked something"
+      currentSelection: e["target"]["attrs"]["id"],
+      showBar: true
     })
   }
 
   render () {
+    let navbar;
+    if(this.state.showBar) {
+      navbar = <NavBar currentSelection={this.state.currentSelection} />
+    } else {
+      navbar = ""
+    }
     return (
       <div id="Nav">
         <div id="techButton">
@@ -30,9 +38,7 @@ class NavContainer extends Component {
           <img id="hammer" alt="Other Interests" src={process.env.PUBLIC_URL + '/int-hammer.png'} />
           <NavIcon />
         </div>
-        <div id="navBar">
-          <NavBar currentSelection={this.state.currentSelection}/>
-        </div>
+        {navbar}
       </div>
     )
   }
