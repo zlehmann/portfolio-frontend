@@ -68,11 +68,22 @@
   color: rgba(0,0,0, 1.0);
 }
 
+#navBar ul {
+  margin: 0;
+  margin: 5px;
+}
+
 #nav {
   width: 100%;
   height: 250px;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 10px;
+  margin-top: 10px;
   max-width: 980px;
-  position: relative;
+  position: fixed;
+}
+
+.contentContainer {
+  max-width: 980px;
+  margin-left: 20px;
 }

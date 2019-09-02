@@ -10,7 +10,7 @@ class NavContainer extends Component {
     this.state = {
       currentSelection: "none",
       showBar: false,
-      scale: 0.3
+      scale: 0.2
     }
   }
 
