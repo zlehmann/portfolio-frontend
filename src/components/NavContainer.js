@@ -29,7 +29,7 @@ class NavContainer extends Component {
       navbar = ""
     }
     return (
-      <div id="Nav">
+      <div id="nav">
         <div id="techButton">
           <TechButton action={this.handleClick} scale={this.state.scale}/>
         </div>

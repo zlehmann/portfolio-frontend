@@ -4,11 +4,12 @@ class NavBar extends Component {
 
   render() {
     const style = {
-      width: "100%",
       backgroundColor: "rgba(0,0,0, 0.4)",
+      position: "absolute",
+      width: "90%",
       height: (150 * this.props.scale),
-      marginLeft: (300 * this.props.scale),
-      marginTop: (75 * this.props.scale)
+      left: (300 * this.props.scale),
+      top: (75 * this.props.scale)
     }
 
 
