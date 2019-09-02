@@ -8,7 +8,6 @@ class NavContainer extends Component {
     super(props)
     this.handleClick = this.handleClick.bind(this)
     this.state = {
-      currentSelection: "none",
       showBar: false,
       scale: 0.2
     }
