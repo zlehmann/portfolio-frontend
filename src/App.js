@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import NavContainer from './components/nav/NavContainer.js'
 import ContentContainer from './components/content/ContentContainer.js'
+import Footer from './components/footer/Footer.js'
 
 
 class App extends Component {
@@ -12,7 +13,7 @@ class App extends Component {
       currentSelection: "none"
     }
   }
-  
+
   render() {
     let bgImage = "/env_fenceline.JPG"
     let style = {
@@ -29,6 +30,7 @@ class App extends Component {
       <div id="App" style={style}>
         <NavContainer />
         <ContentContainer />
+        <Footer />
       </div>
     );
   }
