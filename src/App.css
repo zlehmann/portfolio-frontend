@@ -32,6 +32,7 @@
   }
 }
 
+/*------NAVIGATION------*/
 #techButton {
   position: absolute; top: 0px; left: 0px;
   display: inline;
@@ -83,6 +84,7 @@
   position: fixed;
 }
 
+/*----------CONTENT-------------*/
 .contentContainer {
   max-width: 980px;
   margin-left: 20px;
@@ -108,6 +110,25 @@
   color: black;
 }
 
+/*----------PROJECT CARDS--------*/
+#projects {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 25px;
+  padding: 10px;
+}
+
+#projects h2 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 0;
+}
+
+/*------FOOTER-------*/
 .footer {
   width: 61px;
   height: 25px;
