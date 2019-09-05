@@ -13,12 +13,18 @@ class CardStack extends Component {
       {id: 5, title: "Project 6", type: "Interests", cardImage: "some url", blurb: "some text"}
     ]
 
+    let category = this.props.category
+    let projectsSorted = placeholderProjects.filter(function(project) {
+      return project.type === category
+    })
+
+    console.log(this.props.category)
+    console.log(projectsSorted)
     return (
       <div id="projects">
         <h2>{this.props.category}</h2>
-        <div id="cardArea">
-          {placeholderProjects.map(
-            card => <ProjectCard key={card.id} project={card} />)}
+        <div id="cardArea" className="clearfix">
+          {projectsSorted.map(card => <ProjectCard key={card.id} project={card} />)}
         </div>
       </div>
     )

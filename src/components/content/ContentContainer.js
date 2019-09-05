@@ -6,17 +6,12 @@ import Interests from './Interests.js'
 import CardStack from './CardStack.js'
 
 class ContentContainer extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      currentContent: "home"
-    }
-  }
+
 
   render() {
     let content;
     let category;
-    switch(this.state.currentContent) {
+    switch(this.props.currentSelection) {
       case "env":
         content = <Environment />
         category = "Environmental"

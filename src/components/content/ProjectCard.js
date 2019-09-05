@@ -8,7 +8,7 @@ class ProjectCard extends Component {
     return (
       <div className="projectCard">
         <h3>{project.title}</h3>
-        <div id="img"></div>
+        <div className="projectCardImg"></div>
         <p>{project.blurb}</p>
       </div>
     )

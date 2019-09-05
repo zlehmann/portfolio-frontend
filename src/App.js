@@ -8,10 +8,21 @@ import Footer from './components/footer/Footer.js'
 class App extends Component {
   constructor(props) {
     super(props)
+    this.handleClick = this.handleClick.bind(this)
     this.state = {
       currentContent: "home",
-      currentSelection: "none"
+      currentSelection: "none",
+      showBar: false,
+      scale: 0.2
     }
+  }
+
+  handleClick(e) {
+    this.setState({
+      currentSelection: e["target"]["attrs"]["id"],
+      showBar: true
+    })
+    console.log('clickec')
   }
 
   render() {
@@ -28,8 +39,12 @@ class App extends Component {
 
     return (
       <div id="App" style={style}>
-        <NavContainer />
-        <ContentContainer />
+        <NavContainer
+          currentSelection={this.state.currentSelection}
+          handleClick={this.handleClick}
+          showBar={this.state.showBar}
+          scale={this.state.scale}/>
+        <ContentContainer currentSelection={this.state.currentSelection}/>
         <Footer />
       </div>
     );
