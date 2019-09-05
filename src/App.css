@@ -157,6 +157,8 @@
 .projectCard .projectCardImg {
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 5px;
+  border-bottom: 5px solid rgba(82,190,128, 1.0);
   align: center;
   background-color: rgba(50,50,50,1);
   width: 180px;

@@ -23,7 +23,6 @@ class NavContainer extends Component {
           <img id="hammer" alt="Other Interests" src={process.env.PUBLIC_URL + '/int-hammer.png'} width={150*this.props.scale}/>
           <NavIcon scale={this.props.scale} />
         </div>
-        {navbar}
       </div>
     )
   }
