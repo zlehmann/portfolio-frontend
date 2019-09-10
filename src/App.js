@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const response = fetch('https://www.zacharylehmann.com:3000/projects')
+    const response = fetch('https://lehmann-portfolio-backend.herokuapp.com/projects')
       .then(res => res.json())
       .then(json => {
         this.setState({
