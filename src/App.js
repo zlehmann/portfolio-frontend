@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const response = fetch('/projects')
+    const response = fetch('https://www.zacharylehmann.com:3000/projects')
       .then(res => res.json())
       .then(json => {
         this.setState({
