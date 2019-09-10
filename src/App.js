@@ -13,7 +13,8 @@ class App extends Component {
       currentContent: "home",
       currentSelection: "none",
       showBar: false,
-      scale: 0.2
+      scale: 0.2,
+      projects: []
     }
   }
 
@@ -22,7 +23,18 @@ class App extends Component {
       currentSelection: e["target"]["attrs"]["id"],
       showBar: true
     })
-    console.log('clickec')
+  }
+
+  componentDidMount() {
+    const response = fetch('/projects')
+      .then(res => res.json())
+      .then(json => {
+        this.setState({
+          projects: json
+        })
+      })
+      .catch(err => {console.log(err)})
+
   }
 
   render() {
@@ -44,7 +56,7 @@ class App extends Component {
           handleClick={this.handleClick}
           showBar={this.state.showBar}
           scale={this.state.scale}/>
-        <ContentContainer currentSelection={this.state.currentSelection}/>
+        <ContentContainer currentSelection={this.state.currentSelection} projects={this.state.projects}/>
         <Footer />
       </div>
     );

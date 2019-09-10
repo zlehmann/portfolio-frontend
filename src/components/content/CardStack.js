@@ -14,12 +14,15 @@ class CardStack extends Component {
     ]
 
     let category = this.props.category
-    let projectsSorted = placeholderProjects.filter(function(project) {
-      return project.type === category
-    })
+    let projectsSorted = []
+    if (category === "Recent") {
+      projectsSorted = this.props.projects.sort()
+    } else {
+      projectsSorted = this.props.projects.filter(function(project) {
+        return project.proj_type === category
+      })
+    }
 
-    console.log(this.props.category)
-    console.log(projectsSorted)
     return (
       <div id="projects">
         <h2>{this.props.category}</h2>
