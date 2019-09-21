@@ -26,7 +26,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const response = fetch('https://lehmann-portfolio-backend.herokuapp.com/projects')
+    const response = fetch('https://www.zacharylehmann.com/projects', {
+      headers: {'Access-Control-Allow-Origin': 'http://www.zacharylehmann.com'}
+    })
       .then(res => res.json())
       .then(json => {
         this.setState({
