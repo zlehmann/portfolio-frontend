@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard.js'
 class CardStack extends Component {
 
   render() {
-    let placeholderProject = {id: 0, title: "Project 1", type: "Environmental", cardImage: "some url", blurb: "some textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome text"}
+    let placeholderProject = {id: 0, title: "Project 1", type: "Environmental", cardImage: "some url", blurb: "some textsometextsometextsometextsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome text"}
 
     let category = this.props.category
     let projectsSorted = []
