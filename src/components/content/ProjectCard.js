@@ -5,11 +5,15 @@ class ProjectCard extends Component {
   render () {
     let project = this.props.project;
     let description = project.blurb.substring(0,55).concat("...")
+    console.log(project)
+    console.log(process.env.PUBLIC_URL + "/project_images/" + project.cardImage)
 
     return (
       <div className="projectCard">
         <h3>{project.title}</h3>
-        <div className="projectCardImg"></div>
+        <div className="projectCardImg">
+          <img width="180" height="205" src={process.env.PUBLIC_URL + "/project_images/" + project.cardImage}/>
+        </div>
         <p>{description}</p>
       </div>
     )
