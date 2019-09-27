@@ -5,8 +5,6 @@ class ProjectCard extends Component {
   render () {
     let project = this.props.project;
     let description = project.blurb.substring(0,55).concat("...")
-    console.log(project)
-    console.log(process.env.PUBLIC_URL + "/project_images/" + project.cardImage)
 
     return (
       <div className="projectCard">
