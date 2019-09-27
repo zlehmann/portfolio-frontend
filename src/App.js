@@ -26,6 +26,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    console.log("component mounted")
     setInterval(function() {
     fetch('https://lehmann-portfolio-backend.herokuapp.com:3000/projects')
       .then(res => res.json())
