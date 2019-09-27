@@ -26,7 +26,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log("component mounted")
     setInterval(function() {
     fetch('https://lehmann-portfolio-backend.herokuapp.com/projects')
       .then(res => res.json())
@@ -40,6 +39,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state)
     let bgImage = "/env_fenceline.JPG"
     let style = {
       width: "100%",
