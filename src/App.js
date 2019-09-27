@@ -25,8 +25,7 @@ class App extends Component {
     })
   }
 
-  componentDidMount() {
-    //setInterval(function() {
+  fetchProjects() {
     fetch('https://lehmann-portfolio-backend.herokuapp.com/projects')
       .then(res => res.json())
       .then(json => {
@@ -36,7 +35,13 @@ class App extends Component {
         })
       })
       .catch(err => {console.log(err)})
-    //}, 300000) //ping backend every 5 mins to keep dynos awake
+  }
+
+  componentDidMount() {
+    this.fetchProjects()
+    setInterval(function() {
+      this.fetchProjects()
+    }, 300000) //ping backend every 5 mins to keep dynos awake
   }
 
   render() {
