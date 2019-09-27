@@ -30,6 +30,7 @@ class App extends Component {
     fetch('https://lehmann-portfolio-backend.herokuapp.com/projects')
       .then(res => res.json())
       .then(json => {
+        console.log(json)
         this.setState({
           projects: json
         })
