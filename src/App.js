@@ -29,7 +29,6 @@ class App extends Component {
     fetch('https://lehmann-portfolio-backend.herokuapp.com/projects')
       .then(res => res.json())
       .then(json => {
-        console.log(json)
         this.setState({
           projects: json
         })
@@ -38,14 +37,12 @@ class App extends Component {
   }
 
   componentDidMount() {
+    document.title = "Zak Lehmann's Portfolio"
     this.fetchProjects()
-    setInterval(function() {
-      this.fetchProjects()
-    }, 300000) //ping backend every 5 mins to keep dynos awake
+    setInterval(this.fetchProjects(), 300000) //ping backend every 5 mins to keep dynos awake
   }
 
   render() {
-    console.log(this.state)
     let bgImage = "/env_fenceline.JPG"
     let style = {
       width: "100%",

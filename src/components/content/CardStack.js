@@ -15,7 +15,6 @@ class CardStack extends Component {
         return project.proj_type === category
       })
     }
-    console.log(this.props)
 
     return (
       <div id="projects">
