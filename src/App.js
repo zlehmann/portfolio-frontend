@@ -28,7 +28,7 @@ class App extends Component {
   componentDidMount() {
     console.log("component mounted")
     setInterval(function() {
-    fetch('https://lehmann-portfolio-backend.herokuapp.com:3000/projects')
+    fetch('https://lehmann-portfolio-backend.herokuapp.com/projects')
       .then(res => res.json())
       .then(json => {
         this.setState({
