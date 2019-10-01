@@ -17,13 +17,14 @@ class App extends Component {
       showPopup: false,
       scale: 0.2,
       projects: [],
-      currentProject: null
+      currentProject: null,
     }
   }
 
   handleClick(e) {
+    console.log(e)
     this.setState({
-      currentSelection: e["target"]["attrs"]["id"]
+      currentSelection: e
     })
   }
 
@@ -45,7 +46,6 @@ class App extends Component {
   }
 
   togglePopup(e) {
-    console.log("clicked: ", e)
     if (this.state.currentProject == null) {
       this.setState({
         currentProject: e,
@@ -60,14 +60,13 @@ class App extends Component {
   }
 
   render() {
-    let bgImage = "/env_fenceline.JPG"
     let style = {
       width: "100%",
       height: "400px",
       marginRight: "auto",
       marginLeft: "auto",
       maxWidth: "1080px",
-      backgroundImage: 'url(' + (process.env.PUBLIC_URL + bgImage) + ')',
+      backgroundImage: 'url(' + (process.env.PUBLIC_URL + "env_fenceline.JPG") + ')',
       backgroundSize: "cover"
     }
 

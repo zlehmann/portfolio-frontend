@@ -46,17 +46,22 @@
 
 #leaf {
   top: 13.333%;
-  left: 3.333%;
+  left: 2%;
 }
 
 #gear {
   top: 13.333%;
-  left: 51.666%;
+  left: 53%;
 }
 
 #hammer {
-  top: 51.666%;
+  top: 54%;
   left: 26.666%;
+}
+
+#home {
+  top: 33%;
+  left: 35%;
 }
 
 #navIcon {
