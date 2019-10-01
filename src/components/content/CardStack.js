@@ -20,7 +20,6 @@ class CardStack extends Component {
       <div id="projects">
         <h2>{this.props.category}</h2>
         <div id="cardArea" className="clearfix">
-          //<ProjectCard key={placeholderProject.id} project={placeholderProject} />
           {projectsSorted.map(card => <ProjectCard key={card.id} project={card} />)}
         </div>
       </div>
