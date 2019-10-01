@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard.js'
 class CardStack extends Component {
 
   render() {
-    let placeholderProject = {id: 0, title: "Project 1", type: "Environmental", card_image: "wetland1.jpg", blurb: "some textsometextsometextsometextsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome text"}
+    //let placeholderProject = {id: 0, title: "Project 1", type: "Environmental", card_image: "wetland1.jpg", blurb: "some textsometextsometextsometextsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome text"}
 
     let category = this.props.category
     let projectsSorted = []
@@ -20,7 +20,7 @@ class CardStack extends Component {
       <div id="projects">
         <h2>{this.props.category}</h2>
         <div id="cardArea" className="clearfix">
-          {projectsSorted.map(card => <ProjectCard key={card.id} project={card} />)}
+          {projectsSorted.map(card => <ProjectCard key={card.id} project={card} togglePopup={this.props.togglePopup}/>)}
         </div>
       </div>
     )

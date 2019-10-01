@@ -32,7 +32,11 @@ class ContentContainer extends Component {
     return (
       <div className="contentContainer">
         {content}
-        <CardStack category={category} projects={this.props.projects}/>
+        <CardStack
+          category={category}
+          projects={this.props.projects}
+          currentProject={this.props.currentProject}
+          togglePopup={this.props.togglePopup}/>
       </div>
     )
   }

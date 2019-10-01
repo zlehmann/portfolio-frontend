@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import NavContainer from './components/nav/NavContainer.js'
 import ContentContainer from './components/content/ContentContainer.js'
+import Popup from './components/content/Popup.js'
 import Footer from './components/footer/Footer.js'
 
 
@@ -9,19 +10,20 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.handleClick = this.handleClick.bind(this)
+    this.togglePopup = this.togglePopup.bind(this)
     this.state = {
       currentContent: "home",
       currentSelection: "none",
-      showBar: false,
+      showPopup: false,
       scale: 0.2,
-      projects: []
+      projects: [],
+      currentProject: null
     }
   }
 
   handleClick(e) {
     this.setState({
-      currentSelection: e["target"]["attrs"]["id"],
-      showBar: true
+      currentSelection: e["target"]["attrs"]["id"]
     })
   }
 
@@ -40,6 +42,21 @@ class App extends Component {
     document.title = "Zak Lehmann's Portfolio"
     this.fetchProjects()
     setInterval(this.fetchProjects(), 300000) //ping backend every 5 mins to keep dynos awake
+  }
+
+  togglePopup(e) {
+    console.log("clicked: ", e)
+    if (this.state.currentProject == null) {
+      this.setState({
+        currentProject: e,
+        showPopup: !this.state.showPopup
+      })
+    } else {
+      this.setState({
+        currentProject: null,
+        showPopup: !this.state.showPopup
+      })
+    }
   }
 
   render() {
@@ -61,7 +78,15 @@ class App extends Component {
           handleClick={this.handleClick}
           showBar={this.state.showBar}
           scale={this.state.scale}/>
-        <ContentContainer currentSelection={this.state.currentSelection} projects={this.state.projects}/>
+        <ContentContainer
+          currentSelection={this.state.currentSelection}
+          projects={this.state.projects}
+          currentProject={this.state.currentProject}
+          togglePopup={this.togglePopup}/>
+          {this.state.showPopup ?
+            <Popup togglePopup={this.togglePopup} project={this.state.currentProject} />
+            : null
+          }
         <Footer />
       </div>
     );
