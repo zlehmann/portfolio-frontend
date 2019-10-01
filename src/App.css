@@ -200,6 +200,7 @@
 
 .inner_popup {
   position: absolute;
+  max-width: 980px;
   left: 5%;
   right: 5%;
   top: 5%;
@@ -207,6 +208,18 @@
   border-radius: 20px;
   background: white;
   overflow-y: auto;
+}
+
+.inner_popup::-webkit-scrollbar {
+  width: 10px;
+}
+
+.inner_popup::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
+.inner_popup::-webkit-scrollbar-button {
+  visibility: hidden;
 }
 
 .inner_popup h1 {
@@ -228,6 +241,9 @@
   background-color: rgba(0,0,0, 0.7);
   border-radius: 10px;
   float: right;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
 /*------FOOTER-------*/
