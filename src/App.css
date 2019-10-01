@@ -201,8 +201,8 @@
 .inner_popup {
   position: absolute;
   max-width: 980px;
-  left: 5%;
-  right: 5%;
+  left: 25%;
+  right: 25%;
   top: 5%;
   bottom: 5%;
   border-radius: 20px;
@@ -233,6 +233,7 @@
 .inner_popup p {
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 .closeButton {
@@ -242,8 +243,8 @@
   border-radius: 10px;
   float: right;
   position: fixed;
-  right: 0;
-  top: 0;
+  right: 25%;
+  top: 5%;
 }
 
 /*------FOOTER-------*/
