@@ -9,7 +9,7 @@ class CardStack extends Component {
     let category = this.props.category
     let projectsSorted = []
     if (category === "Recent") {
-      projectsSorted = this.props.projects.sort()
+      projectsSorted = this.props.projects.sort((a,b)=>(a.created_at < b.created_at) ? 1: -1)
     } else {
       projectsSorted = this.props.projects.filter(function(project) {
         return project.proj_type === category
