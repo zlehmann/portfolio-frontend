@@ -215,6 +215,11 @@
   overflow-y: auto;
 }
 
+.inner_popup .video {
+  display: block;
+  margin: auto;
+}
+
 .inner_popup::-webkit-scrollbar {
   width: 10px;
 }
