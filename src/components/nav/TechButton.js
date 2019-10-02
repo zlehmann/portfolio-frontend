@@ -12,7 +12,7 @@ class TechButton extends Component {
   }
 
   componentDidMount() {
-    if (this.props.currentSelection =="home") {
+    if (this.props.currentSelection === "home") {
       this.setState({
         selectedCat: "none",
         hoveredCat: "none"
