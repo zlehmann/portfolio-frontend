@@ -16,25 +16,19 @@ class NavBar extends Component {
     if(this.props.currentSelection === "tech") {
       return (
         <div id="navBar" style={style}>
-          <ul className="techNavLinks">
-            <li>tech placeholder</li>
-          </ul>
+          <p>Technology Projects</p>
         </div>
       )
     } else if(this.props.currentSelection === "env") {
       return (
         <div id="navBar" style={style}>
-          <ul className="envNavLinks">
-            <li>env placeholder</li>
-          </ul>
+          <p>Environmental Projects</p>
         </div>
       )
     } else if(this.props.currentSelection === "int") {
       return (
         <div id="navBar" style={style}>
-          <ul className="intNavLinks">
-            <li>int placeholder</li>
-          </ul>
+          <p>General Interests</p>
         </div>
       )
     } else {
