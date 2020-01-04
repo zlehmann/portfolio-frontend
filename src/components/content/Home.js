@@ -5,13 +5,11 @@ class Home extends Component {
     return (
       <div className="contentHeader">
         <h1>Zachary Lehmann</h1>
-        <p>My passion for the environment and technology has taken
-        me on some interesting journeys. I have spent the past 15 years working
-        with wetlands and forested habitats all over the east coast. I have developed
-        Unmanned Aerial System platforms for wetland re-vegetation surveys and
-        created sea-level rise models using GIS software. Now after graduating from
-        the Flatiron web-developer boot camp I'm looking to transition my career
-        full time. </p>
+        <p>I am a software developer with a background in environmental science, and geospatial information
+        systems (GIS). I am currently working as a data acquisition specialist working with water quality data and
+        Unmanned Aerial System (UAS) imagery data to model infrastructure impacts on the environment. I am also
+        currently using R and Shiny to build web interfaces for large water quality data sets, enabling government
+        officials to analyze previously unweildy data reports more easily and efficiently.</p>
       </div>
     )
   }
