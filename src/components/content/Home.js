@@ -5,11 +5,12 @@ class Home extends Component {
     return (
       <div className="contentHeader">
         <h1>Zachary Lehmann</h1>
-        <p>I am a software developer with a background in environmental science, and geospatial information
+        <p>I am a software developer and senior environmental scientist with a passion for technology,
+         the environment, and geospatial information
         systems (GIS). I am currently working as a data acquisition specialist working with water quality data and
         Unmanned Aerial System (UAS) imagery data to model infrastructure impacts on the environment. I am also
         currently using R and Shiny to build web interfaces for large water quality data sets, enabling government
-        officials to analyze previously unweildy data reports more easily and efficiently.</p>
+        officials to analyze previously unwieldy data reports more easily and efficiently.</p>
       </div>
     )
   }
